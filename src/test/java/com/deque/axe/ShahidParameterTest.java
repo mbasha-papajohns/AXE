@@ -40,7 +40,7 @@ public class ShahidParameterTest {
     public void setUp() {
 
 // chrome driver
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\557897\\Downloads\\chromedriver.exe");
+         System.setProperty("webdriver.chrome.driver", "//opt//chromeDriver//chromedriver");
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless", "--disable-gpu");
