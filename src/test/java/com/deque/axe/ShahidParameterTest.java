@@ -39,18 +39,16 @@ public class ShahidParameterTest {
     @Before
     public void setUp() {
 
-// chrome driver
-         System.setProperty("webdriver.chrome.driver", "//opt//chromeDriver//chromedriver");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\557897\\Downloads\\chromedriver.exe");
+      // chrome driver
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\557897\\Downloads\\chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--disable-gpu");
+        //options.addArguments("--headless", "--disable-gpu");
         driver =  new ChromeDriver( options );
-        //driver.manage().window().maximize(); // maximize web browser
+       // driver.manage().window().maximize(); // maximize web browser
         driver.manage().deleteAllCookies();
 
-         //driver = new FirefoxDriver();
-        //driver.get("https://www.papajohnspizza.in/");
-        //driver.findElement(By.linkText("Menu")).click();
     }
 
     /**
@@ -73,6 +71,7 @@ public class ShahidParameterTest {
     public void testAccessibility() {
         System.out.println("BEGINNING OF NEW TEST FOR :: "+ pageUrl);
         driver.get(pageUrl);
+        //driver.manage().window().maximize();
         driver.findElement(By.linkText("Menu")).click();
         pageUrl=driver.getCurrentUrl();
         JSONObject responseJSON = new AXE.Builder(driver, scriptUrl).analyze();
