@@ -10,3 +10,4 @@ echo `dpkg -l | grep -E '^ii' | grep xvfb` >>$DIR/out.txt
 `Xvfb :0 -screen 0 1024x768x16 &`
 echo "After the process run" >>$DIR/out.txt
 echo `ps -ef| grep Xvfb` >>$DIR/out.txt
+echo `mvn -version` >>$DIR/out.txt
