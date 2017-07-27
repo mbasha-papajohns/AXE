@@ -46,14 +46,11 @@ public class LandingPage2_MenuPage_Test {
     public void Test() {
 
         // chrome driver
-		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\494301\\workspace\\RWD_DesktopAutomation\\supportlibraries\\BrowserDriver\\chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", "//root//RPMS//chromedriver_linux64//chromedriver");
 		
         ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless", "--disable-gpu");
+		options.addArguments("--headless", "--disable-gpu", "--no-sandbox");
 		driver =  new ChromeDriver( options );
-        //driver.manage().window().maximize(); // maximize web browser
-        //driver.manage().deleteAllCookies();
 
 
 

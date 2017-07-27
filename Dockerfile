@@ -76,7 +76,7 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install Chrome WebDriver
 RUN CHROMEDRIVER_VERSION=`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE` && \
-    mkdir -p /opt/chromedriver-$CHROMEDRIVER_VERSION && \
+   # mkdir -p /opt/chromedriver-$CHROMEDRIVER_VERSION && \
     curl -sS -o /tmp/chromedriver_linux64.zip http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip && \
     unzip -qq /tmp/chromedriver_linux64.zip -d /root/RPMS/chromedriver_linux64 && \
     rm /tmp/chromedriver_linux64.zip && \
@@ -85,6 +85,7 @@ RUN CHROMEDRIVER_VERSION=`curl -sS chromedriver.storage.googleapis.com/LATEST_RE
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 ENV PATH $PATH:$JAVA_HOME/bin
+ENV DISPLAY :0
 
 CMD ["/root/accessibility/start.sh"]
 

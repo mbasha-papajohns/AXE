@@ -49,10 +49,8 @@ public class LandingPage3_CartPage_Test {
 		System.setProperty("webdriver.chrome.driver", "//root//RPMS//chromedriver_linux64//chromedriver");
 
         ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless", "--disable-gpu");
+		options.addArguments("--headless", "--disable-gpu", "--no-sandbox");
 		driver =  new ChromeDriver( options );
-        //driver.manage().window().maximize(); // maximize web browser
-        //driver.manage().deleteAllCookies();
 
 
 
