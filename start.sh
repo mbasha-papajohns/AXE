@@ -49,5 +49,6 @@ echo "Starting Xvfb Process."
 
 echo "*********************** MAVEN TEST STARTED ****************************"
 echo "Wait for few minutes for the process to complete ..."
-mvn  test > /dev/null 2>&1
+#mvn  test > /dev/null 2>&1
+mvn test
 echo "************************ MAVEN TEST END *******************************"
